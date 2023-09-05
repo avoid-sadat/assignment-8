@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/orkohealthltd/assignment-8/logs/winston/errors/.e45b64f169cd937d8f4e345d6cc0c19555b45ccd-audit.json",
+    "files": [
+        {
+            "date": 1693559536541,
+            "name": "/Users/orkohealthltd/assignment-8/logs/winston/errors/phu-2023-01-09-15-error.log",
+            "hash": "e2d4559061a7ac35958d164ad5f33dfe86cd1ecbbcda4fd6d8f482610c34a611"
+        },
+        {
+            "date": 1693563510755,
+            "name": "/Users/orkohealthltd/assignment-8/logs/winston/errors/phu-2023-01-09-16-error.log",
+            "hash": "3c5bef7752094726778fcb48da760160b4e04d4835a6d02728ee1157fe8eaa03"
+        },
+        {
+            "date": 1693566368905,
+            "name": "/Users/orkohealthltd/assignment-8/logs/winston/errors/phu-2023-01-09-17-error.log",
+            "hash": "cbe4bb573e2a2a35da7f5a21b35f601c44787826305155d446b394f431d845d4"
+        }
+    ],
+    "hashType": "sha256"
+}
