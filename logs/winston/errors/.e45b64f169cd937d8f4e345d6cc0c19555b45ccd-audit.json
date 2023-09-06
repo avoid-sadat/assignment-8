@@ -79,6 +79,21 @@
             "date": 1694013174032,
             "name": "/Users/orkohealthltd/assignment-8/logs/winston/errors/phu-2023-06-09-21-error.log",
             "hash": "6b7f561b6bd49c12df7da07abeccb48c52b6df355b7f54d6629bc31943b525f2"
+        },
+        {
+            "date": 1694018673861,
+            "name": "/Users/orkohealthltd/assignment-8/logs/winston/errors/phu-2023-06-09-22-error.log",
+            "hash": "412a0e9260a38cf7c6ea9a33aadc3db1557995773232037622857b78ccc48a71"
+        },
+        {
+            "date": 1694021140114,
+            "name": "/Users/orkohealthltd/assignment-8/logs/winston/errors/phu-2023-06-09-23-error.log",
+            "hash": "a3528de6ae6414bf2883f93193af26647c4bcdaee425f3e9afc04d92d3481088"
+        },
+        {
+            "date": 1694023255741,
+            "name": "/Users/orkohealthltd/assignment-8/logs/winston/errors/phu-2023-07-09-00-error.log",
+            "hash": "5d22ba7166c7d6bbe824a1004073af8a5165bb834979c8d89058dcdfd5b69a39"
         }
     ],
     "hashType": "sha256"

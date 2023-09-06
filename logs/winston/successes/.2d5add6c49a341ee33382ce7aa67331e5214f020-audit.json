@@ -79,6 +79,21 @@
             "date": 1694013173696,
             "name": "/Users/orkohealthltd/assignment-8/logs/winston/successes/phu-2023-06-09-21-success.log",
             "hash": "1c7bc90dd918e849a4f55fb271cc3e04822a465cafc8f1b2fdf4e5d20fc00b2c"
+        },
+        {
+            "date": 1694018673348,
+            "name": "/Users/orkohealthltd/assignment-8/logs/winston/successes/phu-2023-06-09-22-success.log",
+            "hash": "b5f856aa22dd49c18e8b33f55a859d5249a42a2d19aabdc84b5693a2cbf14786"
+        },
+        {
+            "date": 1694021139639,
+            "name": "/Users/orkohealthltd/assignment-8/logs/winston/successes/phu-2023-06-09-23-success.log",
+            "hash": "e6b46ad626536fee0bb0b9e33b0df5ed2073d6718bcc5f2ca9eba37ceabe423b"
+        },
+        {
+            "date": 1694023255265,
+            "name": "/Users/orkohealthltd/assignment-8/logs/winston/successes/phu-2023-07-09-00-success.log",
+            "hash": "bbcc9e8dc7e5f9e612073ab8ac56aa2738f43c95164c72b8a21fa5677d7d2404"
         }
     ],
     "hashType": "sha256"
