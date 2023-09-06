@@ -9,6 +9,7 @@ router.post('/', UserController.insertIntoDB)
 router.get('/', UserController.getAllUser)
 router.get('/:id', UserController.getSingleUser)
 router.patch('/:id', UserController.updateSingleUser)
+router.delete('/:id', UserController.deleteSingleUser)
 
 
 
