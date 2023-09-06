@@ -59,6 +59,11 @@
             "date": 1693994402101,
             "name": "/Users/orkohealthltd/assignment-8/logs/winston/successes/phu-2023-06-09-16-success.log",
             "hash": "058651b06e615ee149e4ef2b3281ad1bc2ea84f6f459abc486a149c7b0d4e80a"
+        },
+        {
+            "date": 1694000290159,
+            "name": "/Users/orkohealthltd/assignment-8/logs/winston/successes/phu-2023-06-09-17-success.log",
+            "hash": "84b38ee88e2e9525aee95ebeb966a72754e30ae58b617c938f378a9c4b4d1245"
         }
     ],
     "hashType": "sha256"
