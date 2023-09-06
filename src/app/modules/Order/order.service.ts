@@ -28,6 +28,29 @@ const insertIntoDB = async (data: Order): Promise<Order> => {
   }
 };
 
+const getAllOrder = async() =>{
+  const result = await prisma.order.findMany()
+  return result
+}
+
+const getOrderSpecificCustomer = async (customerId: string): Promise<Order[] | null> => {
+  try {
+    const result = await prisma.order.findMany({
+      where: {
+        userId: customerId, // Filter orders by customer ID
+      },
+    });
+
+    console.log(result);
+    return result;
+  } catch (error) {
+    console.error("Error fetching customer orders: ");
+    return null;
+  }
+};
+
 export const OrderService = {
   insertIntoDB,
+  getAllOrder,
+  getOrderSpecificCustomer
 };

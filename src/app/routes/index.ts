@@ -41,6 +41,10 @@ const moduleRoutes = [
   {
     path:"/orders/create-order",
     route:orderRoutes
+  },
+  {
+    path:"/orders",
+    route:orderRoutes
   }
 
 ];
