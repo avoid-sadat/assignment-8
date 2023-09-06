@@ -9,6 +9,7 @@ router.post('/', BookController.insertIntoDB)
 router.get('/', BookController.getAllFromDB)
 router.get('/:id', BookController.singleBookDB)
 router.patch('/:id', BookController.singleBookUpdate)
+router.delete('/:id', BookController.deleteBook)
 router.get('/:categoryId/category', BookController.getBookByCategory)
 
 
