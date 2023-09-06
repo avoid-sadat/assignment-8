@@ -87,7 +87,27 @@ const getAllFromDB = async (
   };
 };
 
+const getBookByCategory = async (id:string):Promise<Book[]|null> =>{
+  const result = await prisma.book.findMany({
+    where:{
+      id
+    }
+  })
+  return result
+}
+
+const singleBookDB = async (id:string):Promise<Book | null> =>{
+  const result = await prisma.book.findUnique({
+    where:{
+      id
+    }
+  })
+  return result
+}
+
 export const BookService = {
   insertIntoDB,
-  getAllFromDB
+  getAllFromDB,
+  getBookByCategory,
+  singleBookDB
 }

@@ -26,6 +26,10 @@ const moduleRoutes = [
     
   },
   {
+    path:"/books/create-book",
+    route:bookRoutes
+  },
+  {
     path:"/books",
     route:bookRoutes
   },
