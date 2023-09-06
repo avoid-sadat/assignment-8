@@ -21,7 +21,7 @@ const moduleRoutes = [
     route: userRoutes
   },
   {
-    path:'/category',
+    path:'/categories',
     route:categoryRoutes
     
   },
