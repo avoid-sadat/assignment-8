@@ -105,9 +105,20 @@ const singleBookDB = async (id:string):Promise<Book | null> =>{
   return result
 }
 
+const singleBookUpdate = async (id: string,payload:Partial<Book>):Promise<Book | null> =>{
+  const result = await prisma.book.update({
+    where:{
+      id
+    },
+    data:payload
+  })
+  return result
+}
+
 export const BookService = {
   insertIntoDB,
   getAllFromDB,
   getBookByCategory,
-  singleBookDB
+  singleBookDB,
+  singleBookUpdate
 }
