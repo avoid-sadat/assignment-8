@@ -41,7 +41,7 @@ const getOrderSpecificCustomer = async (customerId: string): Promise<Order[] | n
       },
     });
 
-    console.log(result);
+
     return result;
   } catch (error) {
     console.error("Error fetching customer orders: ");
@@ -49,8 +49,24 @@ const getOrderSpecificCustomer = async (customerId: string): Promise<Order[] | n
   }
 };
 
+const singleOrder = async (orderId: string): Promise<Order | null> => {
+  const result = await prisma.order.findUnique({
+    where: {
+      id: orderId
+    }
+  });
+
+  if (!result) {
+    throw new Error("Order not found");
+  }
+
+  return result;
+}
+
+
 export const OrderService = {
   insertIntoDB,
   getAllOrder,
-  getOrderSpecificCustomer
+  getOrderSpecificCustomer,
+  singleOrder
 };

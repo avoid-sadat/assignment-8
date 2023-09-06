@@ -26,8 +26,19 @@ const getAllOrder = catchAsync(async (req:Request,res:Response)=>{
 })
 
 const getOrderSpecificCustomer = catchAsync(async (req:Request,res:Response)=>{
-  const {id} = req.params
-  const result = await OrderService.getOrderSpecificCustomer(id)
+  const {customerId} = req.params
+  const result = await OrderService.getOrderSpecificCustomer(customerId)
+  sendResponse(res,{
+    statusCode:httpStatus.OK,
+    success:true,
+    message:"Order Fetched Successfully",
+    data:result
+  })
+})
+
+const singleOrder = catchAsync(async (req:Request,res:Response)=>{
+  const {orderId} = req.params
+  const result = await OrderService.singleOrder(orderId)
   sendResponse(res,{
     statusCode:httpStatus.OK,
     success:true,
@@ -41,5 +52,6 @@ const getOrderSpecificCustomer = catchAsync(async (req:Request,res:Response)=>{
 export const OrderController = {
   insertIntoDB,
   getAllOrder,
-  getOrderSpecificCustomer
+  getOrderSpecificCustomer,
+  singleOrder
 }

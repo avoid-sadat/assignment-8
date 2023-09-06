@@ -45,7 +45,11 @@ const moduleRoutes = [
   {
     path:"/orders",
     route:orderRoutes
-  }
+  },
+  {
+    path:"/order",
+    route:orderRoutes
+  },
 
 ];
 
