@@ -9,6 +9,14 @@ const router = express.Router();
 const moduleRoutes = [
   // ... other routes
   {
+    path: "/signup",
+    route: userRoutes
+  },
+  {
+    path: "/login/signin",
+    route: userRoutes
+  },
+  {
     path: "/users",
     route: userRoutes
   },
