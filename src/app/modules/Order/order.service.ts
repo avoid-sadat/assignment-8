@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { Order, Prisma, PrismaClient } from "@prisma/client";
+
+import { Order, PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
