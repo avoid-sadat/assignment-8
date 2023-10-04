@@ -1,69 +1,39 @@
-# University Management Core Service
-This guide will walk you through the process of setting up the University Management Core Service Starter project. By following these steps, you will clone the project, install dependencies, and configure Prisma for database management. Let's get started!
+Site-Link:   
 
+    https://assignment-8-lovat.vercel.app/api/v1/books
 
-## Installation Steps
-### Follow these steps to clone and set up starter project:
+ User
 
-1. `Clone the project:` Open your terminal or command prompt and run the following command to clone the project repository:
+    customer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiY3VzdG9tZXIiLCJ1c2VySWQiOiI1NWNlMzMxMi0wYzFkLTQ0NjEtODA4ZC1mOGE4MzNjOWM5NGMiLCJpYXQiOjE1MTYyMzkwMjJ9.osIorFQxMW9RybjZu56w9MT3YjJqU-W9hjbBwXAfBHE
 
-```bash
-git clone https://github.com/Programming-Hero-Next-Level-Development/university-management-core-service-starter.git university-management-core-service
-```
+    admin token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJ1c2VySWQiOiI0NGI3ZjBhZi03M2UyLTQwNjgtYWQyNy02Y2VjYzI3ZTcyNDMiLCJpYXQiOjE1MTYyMzkwMjJ9.mWstgfbkKCTVaXUa_fpZVTuxiNdv-c99swJpo1LJp-Q
 
-2. `Navigate into the project directory:` Use the cd command to navigate into the project directory:
+    api/v1/auth/signup (POST)
+    api/v1/users (GET)
+    api/v1/users/55ce3312-0c1d-4461-808d-f8a833c9c94c (Single GET) Include an id that is saved in your database
+    api/v1/users/55ce3312-0c1d-4461-808d-f8a833c9c94c (PATCH)
+    api/v1/users/55ce3312-0c1d-4461-808d-f8a833c9c94c (DELETE) Include an id that is saved in your database
+    api/v1/profile (GET)
 
-```bash
-cd university-management-core-service
-```
+Category
 
-3. `Install project dependencies:` Next, install the project dependencies by running the following command:
+    api/v1/categories/create-category (POST)
+    api/v1/categories (GET)
+    api/v1/categories/f64f2ec1-c670-475e-92ad-f3c73b42f755 (Single GET) Include an id that is saved in your database
+    api/v1/categories/f64f2ec1-c670-475e-92ad-f3c73b42f755 (PATCH)
+    api/v1/categories/f64f2ec1-c670-475e-92ad-f3c73b42f755 (DELETE) Include an id that is saved in your database
 
-```bash
-yarn install
-```
+Books
 
-4. Configure Prisma and the database connection:
+    api/v1/books/create-book (POST)
+    api/v1/books (GET)
+    api/v1/books/:categoryId/category (GET)
+    api/v1/books/:id (GET)
+    api/v1/books/:id (PATCH)
+    api/v1/books/:id (DELETE)
 
-- Add Prisma as a development dependency by running the following command:
-```bash
-yarn add prisma --save-dev
-```
+Orders
 
-- Set up your Prisma project by creating the Prisma schema file using the following command:
-```bash
-npx prisma init
-```
-
-- Open the prisma/schema.prisma file and configure your database connection details.
-
-```bash
-datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
-}
-```
-
-- Create a .env file in the project root directory and set the DATABASE_URL environment variable. Replace the placeholders with your database connection details:
-```bash
-DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=SCHEMA"
-```
-
-5. Creating the database schema
-6. Migrate the database schema: Use the following command to create and apply the initial database schema:
-
-```bash
-npx prisma migrate dev --name init
-```
-This command creates a new migration file based on your schema changes and applies it to your database.
-
-6. `Install Prisma Client:` Install the Prisma Client library by running the following command:
-```bash
-yarn add @prisma/client
-```
-
-This command installs the Prisma Client, which provides an interface to interact with your database.
-
-That's it! You have successfully set up the University Management Core Service Starter project. You can now start exploring and working with the codebase. Refer to the project documentation or README for further instructions on how to run and use the core service.
-
-Happy coding!
+    api/v1/orders/create-order (POST)
+    api/v1/orders (GET)
+    api/v1/orders/:orderId (GET)
