@@ -9,6 +9,7 @@ Site-Link:
     admin token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJ1c2VySWQiOiI0NGI3ZjBhZi03M2UyLTQwNjgtYWQyNy02Y2VjYzI3ZTcyNDMiLCJpYXQiOjE1MTYyMzkwMjJ9.mWstgfbkKCTVaXUa_fpZVTuxiNdv-c99swJpo1LJp-Q
 
     api/v1/auth/signup (POST)
+    api/v1/auth/signin (POST)
     api/v1/users (GET)
     api/v1/users/55ce3312-0c1d-4461-808d-f8a833c9c94c (Single GET) Include an id that is saved in your database
     api/v1/users/55ce3312-0c1d-4461-808d-f8a833c9c94c (PATCH)
