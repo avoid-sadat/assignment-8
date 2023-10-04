@@ -10,11 +10,11 @@ const router = express.Router();
 const moduleRoutes = [
   // ... other routes
   {
-    path: "/signup",
+    path: "/auth/signup",
     route: userRoutes
   },
   {
-    path: "/login/signin",
+    path: "/auth/signin",
     route: userRoutes
   },
   {
