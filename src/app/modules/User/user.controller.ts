@@ -57,21 +57,21 @@ const deleteSingleUser = catchAsync(async (req:Request,res:Response)=>{
   })
 })
 
-// const loginUser = catchAsync(async (req:Request,res:Response)=>{
+const loginUser = catchAsync(async (req:Request,res:Response)=>{
   
   
-//   const result = await UserService.loginUser(req.body)
-//   sendResponse(res,{
-//     statusCode:httpStatus.OK,
-//     success:true,
-//     message:"User Login  Successfully",
-//     data:result
-//   })
-// })
+  const result = await UserService.loginUser(req.body)
+  sendResponse(res,{
+    statusCode:httpStatus.OK,
+    success:true,
+    message:"User Login  Successfully",
+    data:result
+  })
+})
 
 export const UserController ={
   insertIntoDB,
-  //loginUser,
+  loginUser,
   getAllUser,
   getSingleUser,
   updateSingleUser,

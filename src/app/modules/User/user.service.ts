@@ -1,4 +1,7 @@
 import { PrismaClient, User } from "@prisma/client";
+import { ILoginUser } from "./user.constant";
+import httpStatus from "http-status";
+import ApiError from "../../../errors/ApiError";
 // import { ILoginUser} from "./user.constant";
 // import ApiError from "../../../errors/ApiError";
 // import httpStatus from "http-status";
@@ -13,32 +16,32 @@ const insertIntoDB = async (data:User):Promise<User> =>{
   return result
 }
 
-// const loginUser = async (payload: ILoginUser): Promise<ILoginUser> => {
-//   const { email, password } = payload;
+const loginUser = async (payload: ILoginUser): Promise<ILoginUser> => {
+  const { email, password } = payload;
 
-//   // Find users with the same email
-//   const usersWithSameEmail = await prisma.user.findMany({ where: { email } });
+  // Find users with the same email
+  const usersWithSameEmail = await prisma.user.findMany({ where: { email } });
 
-//   if (usersWithSameEmail.length === 0) {
-//     throw new ApiError(httpStatus.NOT_FOUND, 'User does not exist');
-//   }
+  if (usersWithSameEmail.length === 0) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'User does not exist');
+  }
 
-//   // Loop through the found users and check if the provided password matches any user's password
-//   let authenticatedUser = null;
+  // Loop through the found users and check if the provided password matches any user's password
+  let authenticatedUser = null;
 
-//   for (const user of usersWithSameEmail) {
-//     if (user.password === password) {
-//       authenticatedUser = user;
-//       break; // Exit the loop as soon as a matching user is found
-//     }
-//   }
+  for (const user of usersWithSameEmail) {
+    if (user.password === password) {
+      authenticatedUser = user;
+      break; // Exit the loop as soon as a matching user is found
+    }
+  }
 
-//   if (!authenticatedUser) {
-//     throw new ApiError(httpStatus.UNAUTHORIZED, 'Password is incorrect');
-//   }
+  if (!authenticatedUser) {
+    throw new ApiError(httpStatus.UNAUTHORIZED, 'Password is incorrect');
+  }
 
-//   return authenticatedUser; // Return the authenticated user
-// }
+  return authenticatedUser; // Return the authenticated user
+}
 
 const getAllUser = async ()=>{
   const result = await prisma.user.findMany()
@@ -79,7 +82,7 @@ const deleteSingleUser = async (id:string):Promise<User> => {
 
 export const UserService = {
   insertIntoDB,
- // loginUser,
+ loginUser,
  getAllUser,
  getSingleUser,
  updateSingleUser,
